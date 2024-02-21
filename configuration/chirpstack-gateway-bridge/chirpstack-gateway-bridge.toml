@@ -1,7 +1,20 @@
 # See https://www.chirpstack.io/gateway-bridge/install/config/ for a full
 # configuration example and documentation.
+[general]
+
+log_level=4
+log_json=true
+
+[integration]
+marshaler="json"
+
 
 [integration.mqtt.auth.generic]
 servers=["tcp://127.0.0.1:1883"]
 username=""
 password=""
+
+
+[integration.mqtt]
+server="tcp://127.0.0.1:1883/"
+json=true
